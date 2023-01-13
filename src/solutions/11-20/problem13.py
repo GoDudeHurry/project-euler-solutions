@@ -9,9 +9,7 @@ class LargeSum:
     def getSum(self):
         index = 0
         while index <= len(self.numberAsAString)-50:
-            subString = self.numberAsAString[index:index+50]
-            numberAsAList = list(map(int, subString.split()))
-            self.sum += sum(numberAsAList)
+            self.sum += int(self.numberAsAString[index:index+50])
             index += 50
         return self.sum
         
